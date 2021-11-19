@@ -3,7 +3,7 @@
 using namespace::std;
 int main()
 {
-    int n;
+    int n;//zmienna stala 
     cout<<"podaj rozmiar: ";
     cin >> n;
     if (n>100){
