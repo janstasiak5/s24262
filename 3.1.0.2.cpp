@@ -19,7 +19,7 @@ int main()
         A.push_back(start);
         start = start + 1;
     }
-    for (int i= 0; i < A.size();i++)
+    for (int i= 0; i < A.size();i++) //poprawic
     {
         cout<< A[i]<<endl;
     }
