@@ -1,21 +1,19 @@
 #include <iostream>
 #include <algorithm>
-using namespace::std;
 
-
-void sap(int &a,int &b)
+auto swap(int &a,int &b)
 {
 
-    cout<<"przed:"<<endl;
-    cout<<"a : "<<a<< ", b: "<<b<<endl;
-    cout<<"po:"<<endl;
-    swap(a,b);
-    cout<<"a : "<<a<< ", b: "<<b<<endl;
+    std::cout<<"przed:"<<std::endl;
+    std::cout<<"a : "<<a<< ", b: "<<b<<std::endl;
+    std::cout<<"po:"<<std::endl;
+    std::swap(a,b);
+    std::cout<<"a : "<<a<< ", b: "<<b<<std::endl;
 
 }
 int main(int a, int b)
 {
-    sap(a,b);
+    swap(a,b);
     return 0;
 
 }
