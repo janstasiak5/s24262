@@ -1,19 +1,21 @@
+// Napisz funkcję swap(), która będzie jako parametr przyjmować dwa wskaźniki na int i
+//zamienia miejscami wartości zmiennych, na które te wskaźniki wskazują. W funkcji main() napisz kod,
+//który wywołuje funkcję swap(). Wydrukuj wartość dwóch testowych liczb przed i po zamianie.
+
 #include <iostream>
-#include <algorithm>
-
-auto swap(int &a,int &b)
+void swap(int *b,int *a)
 {
-
-    std::cout<<"przed:"<<std::endl;
-    std::cout<<"a : "<<a<< ", b: "<<b<<std::endl;
-    std::cout<<"po:"<<std::endl;
-    std::swap(a,b);
-    std::cout<<"a : "<<a<< ", b: "<<b<<std::endl;
+    int c = *b;
+    *a=*b;
+    *a=c;
 
 }
-int main(int a, int b)
+int main()
 {
-    swap(a,b);
-    return 0;
+     int a=3,b=4;
 
+     std::cout<<&a<<" "<<a<<" "<<&b<<" "<<b<<std::endl;
+     swap(&a, &b);
+     std::cout<<&a<<" "<<a<<" "<<&b<<" "<<b<<std::endl;
+     return 0;
 }
