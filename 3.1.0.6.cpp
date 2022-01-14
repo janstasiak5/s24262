@@ -1,8 +1,7 @@
-//Napisz program, który dla tablicy A o rozmiarze n
-//będzie szukać wartości zadanej przez użytkownika. Jeśli tablica
-//zawiera taką wartość niech program zwróci jej indeks; w przeciwnym wypadku niech zwróci -1
 #include <iostream>
 #include <vector>
+#include <ctime>
+#include <cstdlib>
 using namespace::std;
 int main()
 {
@@ -12,25 +11,25 @@ int main()
     cout<<"szukasz: ";
     cin>>c;
     std::vector<int> array(a);
+	for (int i= 0; i<array.size();i++)
+	{
+		array.at(i) = rand()%101;
+	}
     cout<< array.size()<<endl;
     for (int i =0; i < array.size();i++)
     {
-        cout<<"A["<<i<<"]-> ";
-        cin>> b;
+	
+
+        if (c==array.at(i))
+	{
+		cout<<"found ";
+	return c;
+	}
 
     }
-    if (b==c)
-        {
-
-            return b;
-        }
-
+	cout<<"not found";
       return -1;
 
 
 }
-
-
-
-
 
